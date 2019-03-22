@@ -25,24 +25,34 @@ def inventory_report(products):
     prices = []
     weights = []
     flams = []
+  
+    rand_price = random.randint(5, 100)
+    rand_weight = random.randint(5, 100)
+    rand_flam = random.uniform(0, 2.5)
 
     unique_products = len(set(products))
 
     for i in range(0, 30):
-        prices.append(Product(products[i]).price)
-
+        prices.append(Product(name=products[i], price=rand_price).price)
+  
     average_price = sum(prices) / 30
 
     for i in range(0, 30):
-        weights.append(Product(products[i]).weight)
-
+        weights.append(Product(name=products[i], weight=rand_weight).weight)
+  
     average_weights = sum(weights) / 30
 
     for i in range(0, 30):
-        flams.append(Product(products[i]).flammability)
-
+        flams.append(Product(name=products[i], flammability=rand_flam).flammability)
+  
     average_flams = sum(flams) / 30
-
+  
+    print('ACME CORPORATION OFFICIAL INVENTORY REPORT')
+    print('Unique product names:', unique_products)
+    print('Average price:', average_price)
+    print('Average weight:', average_weights)
+    print('Average flammability:', average_flams)
+    
 
 if __name__ == '__main__':
     inventory_report(generate_products())
