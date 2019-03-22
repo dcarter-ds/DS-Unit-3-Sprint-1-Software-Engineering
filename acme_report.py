@@ -17,11 +17,34 @@ def generate_products(num_products=30):
       rand_noun.append(random.choice(NOUNS))
     
     products = ["%s%02s" % t for t in zip(rand_adj, rand_noun)]
+    
+    return products
 
 
 def inventory_report(products):
-    for prod in products:
-      return Products(prod)
+  prices = []
+  weights = []
+  flams = []
+
+  unique_products = len(set(products))
+
+  for i in range(0, 30):
+    prices.append(Product(products[i]).price)
+  
+  average_price = sum(prices) / 30
+
+  for i in range(0, 30):
+    weights.append(Product(products[i]).weight)
+  
+  average_weights = sum(weights) / 30
+
+  for i in range(0, 30):
+    flams.append(Product(products[i]).flammability)
+  
+  average_flams = sum(flams) / 30
+  
+  return unique_products, average_price, average_weights, average_flams
+    
 
 
 if __name__ == '__main__':
