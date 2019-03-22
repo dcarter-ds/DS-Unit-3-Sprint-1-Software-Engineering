@@ -20,7 +20,6 @@ def generate_products(num_products=30):
     
     return products
 
-
 def inventory_report(products):
   prices = []
   weights = []
@@ -42,10 +41,7 @@ def inventory_report(products):
     flams.append(Product(products[i]).flammability)
   
   average_flams = sum(flams) / 30
-  
-  return unique_products, average_price, average_weights, average_flams
-    
-
+     
 
 if __name__ == '__main__':
     inventory_report(generate_products())
