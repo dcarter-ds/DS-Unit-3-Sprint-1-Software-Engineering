@@ -13,7 +13,7 @@ class AcmeProductTests(unittest.TestCase):
     def test_default_product_weight(self):
         """Test default product weight being 20"""
         prod = Product('Another Product')
-        self.assertEqual(prod.price, 20)
+        self.assertEqual(prod.weight, 20)
 
     def test_stealability(self):
         """Testing if stealability method returns correct statement"""
