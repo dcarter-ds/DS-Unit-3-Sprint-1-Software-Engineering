@@ -270,6 +270,17 @@ career here, you'll have to answer the following:
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 
+#### Answers:
+- I believe the most important thing to pay attention to in a code review is whether 
+  or not the code is doing what it's supposed to do. Does it solve the problem the
+  developer intends on solving? If it breaks, the obvious answer is "no". But, even if
+  the code does not explicitly break, it must still return the correct result, which can
+  be found through unit testing.
+- Containers are useful because they keep each software project isolated and secure. Each
+  project requires specific dependencies, setup and testing. If these projects are outside
+  a contained environment, a project's specific dependencies may interfere with another project. 
+  Also, if something breaks, you have a definitive answer for where it's breaking; inside your container.
+
 ### Part 8 - Turn it in!
 
 Add all the files you wrote (`acme.py`, `acme_report.py`, and `acme_test.py`),
